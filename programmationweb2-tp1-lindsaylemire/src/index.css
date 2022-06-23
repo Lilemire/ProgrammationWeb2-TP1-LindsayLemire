@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background-color: rgb(34, 31, 47);
+}
+
+.container {
+  width : 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.h1 {
+  color: white;
+  margin-bottom: -3%;
+}
+
+.h2 {
+  color: white;
+  font-weight: 100;
+  font-size: 120%;
+}
+
+.SectionSocial {
+  background-color: rgb(49, 45, 69);
+  width: 19%;
+
+}
