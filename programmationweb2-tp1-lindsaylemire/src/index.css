@@ -18,13 +18,12 @@ body {
 
 .container {
   width : 80%;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
 .h1 {
   color: white;
-  margin-bottom: -3%;
+  margin-bottom: -1.5%;
 }
 
 .h2 {
@@ -33,8 +32,37 @@ body {
   font-size: 120%;
 }
 
-.SectionSocial {
+.tableausocial {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "fb tw ig yt";
+}
+
+.facebook {
+  grid-area: fb;
+  color: white;
   background-color: rgb(49, 45, 69);
   width: 19%;
+}
 
+.twitter {
+  grid-area: tw;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  width: 19%;
+}
+
+.instagram {
+  grid-area: ig;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  width: 19%;
+}
+
+.youtube {
+  grid-area: yt;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  width: 19%;
 }
