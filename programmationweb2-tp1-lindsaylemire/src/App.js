@@ -16,6 +16,10 @@ import Icontwitter from "./components/Icontwitter";
 import Iconinstagram from "./components/Iconinstagram";
 import IconYoutube from "./components/Iconyoutube";
 import Icondown from "./components/Icondown";
+import Tableauoverview from "./components/Tableauoverview";
+import Sectionoverview from "./components/Sectionoverview";
+import Flexoverview from "./components/Flexoverview";
+import Ovupdown from "./components/Ovupdown";
 
 function App() {
   return (
@@ -78,6 +82,125 @@ function App() {
           </Sectionsocial> 
 
         </Tableausocial>
+
+        <Text as="h1">Overview - Today</Text>
+
+        <Tableauoverview>
+
+        <Sectionoverview as="ovpgfacebook">
+          <Flexoverview>
+            <Text as="h2">Page views</Text>
+            <IconFacebook src={iconfacebook} alt="IconFacebook"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">87</Text>
+            <Ovupdown>
+              <Iconup src={iconup} atl="IconUp"/>
+              <Text as="h4">3%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        <Sectionoverview as="ovlkfacebook">
+          <Flexoverview>
+            <Text as="h2">Likes</Text>
+            <IconFacebook src={iconfacebook} alt="IconFacebook"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">52</Text>
+            <Ovupdown>
+              <Icondown src={icondown} alt="IconDown"/>
+              <Text as="h5">2%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        <Sectionoverview as="ovlkinstagram">
+          <Flexoverview>
+            <Text as="h2">Likes</Text>
+            <Iconinstagram src={iconinstagram} alt="IconInstagram"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">5462</Text>
+            <Ovupdown>
+              <Iconup src={iconup} alt="IconUp"/>
+              <Text as="h4">2267%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        <Sectionoverview as="ovpginstagram">
+          <Flexoverview>
+            <Text as="h2">Profile Views</Text>
+            <Iconinstagram src={iconinstagram} alt="IconInstagram"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">52k</Text>
+            <Ovupdown>
+              <Iconup src={iconup} alt="IconUp"/>
+              <Text as="h4">1375%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        <Sectionoverview as="ovpgtwitter">
+          <Flexoverview>
+            <Text as="h2">Retweets</Text>
+            <Icontwitter src={icontwitter} alt="IconTwitter"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">117</Text>
+            <Ovupdown>
+              <Iconup src={iconup} alt="IconUp"/>
+              <Text as="h4">303%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        <Sectionoverview as="ovlktwitter">
+          <Flexoverview>
+            <Text as="h2">Likes</Text>
+            <Icontwitter src={icontwitter} alt="IconTwitter"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">507</Text>
+            <Ovupdown>
+              <Iconup src={iconup} alt="IconUp"/>
+              <Text as="h4">553%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        <Sectionoverview as="ovlkyoutube">
+          <Flexoverview>
+            <Text as="h2">Likes</Text>
+            <IconYoutube src={iconyoutube} alt="IconYoutube"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">107</Text>
+            <Ovupdown>
+              <Icondown src={icondown} alt="IconDown"/>
+              <Text as="h5">19%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        <Sectionoverview as="ovpgyoutube">
+          <Flexoverview>
+            <Text as="h2">Total views</Text>
+            <IconYoutube src={iconyoutube} alt="IconYoutube"/>
+          </Flexoverview>
+          <Flexoverview>
+            <Text as="h6">1407</Text>
+            <Ovupdown>
+              <Icondown src={icondown} alt="IconDown"/>
+              <Text as="h5">12%</Text>
+            </Ovupdown>
+          </Flexoverview>
+        </Sectionoverview>
+
+        </Tableauoverview>
+        
       </Container>
     </div>
   );

@@ -52,6 +52,10 @@ body {
   margin-left: 3%;
 }
 
+.h6 {
+  font-size:150%;
+}
+
 .p {
   font-weight: 100;
   font-size: 90%;
@@ -134,4 +138,97 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 5%;
+}
+
+.ovpgtwitter {
+  grid-area: ovpgtw;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.ovlktwitter {
+  grid-area: ovlktw;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.ovpginstagram {
+  grid-area: ovpgig;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.ovlkinstagram {
+  grid-area: ovlkig;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.ovpgyoutube {
+  grid-area: ovpgyt;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.ovlkyoutube {
+  grid-area: ovlkyt;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.ovpgfacebook {
+  grid-area: ovpgfb;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.ovlkfacebook {
+  grid-area: ovlkfb;
+  color: white;
+  background-color: rgb(49, 45, 69);
+  margin: 10% 4% 0% 0%;
+  padding:10%;
+  text-align: center;
+}
+
+.tableauoverview {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "ovpgfb ovlkfb ovlkig ovpgig"
+  "ovpgtw ovlktw ovlkyt ovpgyt";
+}
+
+.flexoverview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -30%;
+}
+
+.ovupdown {
+  display: flex;
+  align-items: center;
+  margin-top: -0%;
 }
