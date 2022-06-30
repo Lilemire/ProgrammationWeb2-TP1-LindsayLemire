@@ -1,3 +1,8 @@
+import "./App.css";
+import Form from "./components/Form";
+import { createContext, useState } from "react";
+import ReactSwitch from "react-switch";
+
 import iconup from "../src/images/icon-up.svg";
 import iconfacebook from "../src/images/icon-facebook.svg";
 import icontwitter from "../src/images/icon-twitter.svg";
@@ -20,16 +25,28 @@ import Tableauoverview from "./components/Tableauoverview";
 import Sectionoverview from "./components/Sectionoverview";
 import Flexoverview from "./components/Flexoverview";
 import Ovupdown from "./components/Ovupdown";
+import Sectionhover from "./components/Sectionhover";
+
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "dark" ? "light" : "dark"));
+  };
   return (
-    <div className="App">
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App" id={theme}>
+     
       <Container>
         <Text as="h1">Social Media Dashboard</Text>
         <Text as="h2">Total Followers: 23,004</Text>
         <Tableausocial>
 
+
           <Sectionsocial as="facebook">
+          <Sectionhover anotherClassName="hoveredsections">
             <Flexsocial>
               <IconFacebook src={iconfacebook} alt="IconFacebook"/>
               <Text as="h2">@nathanf</Text>
@@ -40,7 +57,9 @@ function App() {
               <Iconup src={iconup} alt="IconUp"/>
               <Text as="h4">12 Today</Text>
             </Flexsocial>
+            </Sectionhover>
           </Sectionsocial> 
+
           
           <Sectionsocial as="twitter">
             <Flexsocial>
@@ -202,7 +221,16 @@ function App() {
         </Tableauoverview>
         
       </Container>
-    </div>
+
+
+        <div className="switch">
+          <label> {theme === "dark" ? "Dark Mode" : "Light Mode"}</label>
+          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+        </div>
+
+
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

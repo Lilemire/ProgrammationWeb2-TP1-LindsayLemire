@@ -11,6 +11,7 @@ const Sectionsocial = ({as = 'facebook', children}) => {
         default:
             return <div className='facebook'>{children}</div>;
     }
-}
+
+};
 
 export default Sectionsocial;

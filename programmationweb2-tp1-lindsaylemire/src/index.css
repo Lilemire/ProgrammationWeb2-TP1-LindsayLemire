@@ -1,234 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
-body {
-  background-color: rgb(34, 31, 47);
-}
 
-.container {
-  width : 90%;
-  margin: 0 auto;
-}
+.hoveredsections {
+  background-color: rgb(122, 119, 136);
+  padding: 5% 2% 3% 4%;
+}*/
 
-.h1 {
+/*
+#dark {
+  background-color: black;
   color: white;
-  font-size:150%;
-  margin-bottom: -1.5%;
 }
 
-.h2 {
-  color: white;
-  font-weight: 100;
-  font-size: 90%;
+#light {
+  background-color: white;
+  color: black;
 }
 
-.h3 {
-  font-size:300%;
-  margin-top:-5%;
-}
-
-.h4 {
-  font-weight: 400;
-  font-size: 80%;
-  color: #1EB589;
-  margin-left: 3%;
-}
-
-.h5 {
-  font-weight: 400;
-  font-size: 80%;
-  color: #DC414C;
-  margin-left: 3%;
-}
-
-.h6 {
-  font-size:150%;
-}
-
-.p {
-  font-weight: 100;
-  font-size: 90%;
-  margin-top: -22%;
-}
-
-.tableausocial {
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
-  "fb tw ig yt";
-}
-
-.facebook {
-  grid-area: fb;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-  border-top: #3b5998 4px solid;
-}
-
-.twitter {
-  grid-area: tw;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 4%;
-  padding:10%;
-  text-align: center;
-  border-top: rgb(29, 155, 240) 4px solid;
-}
-
-.instagram {
-  grid-area: ig;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 4%;
-  padding:10%;
-  text-align: center;
-  border-top: #FFDC80 4px solid;
-}
-
-.youtube {
-  grid-area: yt;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 0% 0% 4%;
-  padding:10%;
-  text-align: center;
-  border-top: red 4px solid;
-}
-
-.iconFb {
-  width:15%;
-  height:15%;
-  margin-right: 5%;
-}
-
-.iconTw {
-  width:15%;
-  height:15%;
-  margin-right: 5%;
-}
-
-.iconIg {
-  width:15%;
-  height:15%;
-  margin-right: 5%;
-}
-
-.iconYt {
-  width:15%;
-  height:15%;
-  margin-right: 5%;
-}
-
-.flexsocial {
+.switch {
   display: flex;
-  align-items: center;
+  width: 100vw;
+  height: 100px;
   justify-content: center;
-  margin-bottom: 5%;
-}
-
-.ovpgtwitter {
-  grid-area: ovpgtw;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.ovlktwitter {
-  grid-area: ovlktw;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.ovpginstagram {
-  grid-area: ovpgig;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.ovlkinstagram {
-  grid-area: ovlkig;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.ovpgyoutube {
-  grid-area: ovpgyt;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.ovlkyoutube {
-  grid-area: ovlkyt;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.ovpgfacebook {
-  grid-area: ovpgfb;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.ovlkfacebook {
-  grid-area: ovlkfb;
-  color: white;
-  background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
-  text-align: center;
-}
-
-.tableauoverview {
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
-  "ovpgfb ovlkfb ovlkig ovpgig"
-  "ovpgtw ovlktw ovlkyt ovpgyt";
-}
-
-.flexoverview {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: -30%;
 }
 
-.ovupdown {
-  display: flex;
-  align-items: center;
-  margin-top: -0%;
+.switch label {
+  margin : 10px;
 }
+
+#dark .switch label {
+  color:black;
+}
+
+#light .switch label {
+  color:white;
+}
+*/
