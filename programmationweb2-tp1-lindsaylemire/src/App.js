@@ -1,5 +1,4 @@
 import "./App.css";
-import Form from "./components/Form";
 import { createContext, useState } from "react";
 import ReactSwitch from "react-switch";
 
@@ -11,21 +10,14 @@ import iconyoutube from "../src/images/icon-youtube.svg";
 import icondown from "../src/images/icon-down.svg";
 
 import Container from "./components/Container";
-import Tableausocial from "./components/Tableausocial";
-import Sectionsocial from "./components/Sectionsocial";
 import Text from "./components/Text";
 import IconFacebook from "./components/Iconfacebook";
-import Flexsocial from "./components/Flexsocial";
 import Iconup from "./components/Iconup";
 import Icontwitter from "./components/Icontwitter";
 import Iconinstagram from "./components/Iconinstagram";
 import IconYoutube from "./components/Iconyoutube";
 import Icondown from "./components/Icondown";
-import Tableauoverview from "./components/Tableauoverview";
-import Sectionoverview from "./components/Sectionoverview";
-import Flexoverview from "./components/Flexoverview";
-import Ovupdown from "./components/Ovupdown";
-import Sectionhover from "./components/Sectionhover";
+import Box from "./components/Box";
 
 export const ThemeContext = createContext(null);
 
@@ -40,194 +32,195 @@ function App() {
       <div className="App" id={theme}>
      
       <Container>
-        <Text as="h1">Social Media Dashboard</Text>
+
+        <div className="flexcontainer">
+          <Text as="h1">Social Media Dashboard</Text>
+
+          <div className="switch">
+            <label> {theme === "dark" ? "Dark Mode" : "Light Mode"}</label>
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+          </div>
+        </div>
+
+
         <Text as="h2">Total Followers: 23,004</Text>
-        <Tableausocial>
 
+        <div className="tableausocial">
 
-          <Sectionsocial as="facebook">
-          <Sectionhover anotherClassName="hoveredsections">
-            <Flexsocial>
+          <Box anotherClassName="socialfacebook">
+            <div className="flexsocial">
               <IconFacebook src={iconfacebook} alt="IconFacebook"/>
               <Text as="h2">@nathanf</Text>
-            </Flexsocial>
+            </div>
             <Text as="h3">1987</Text>
             <Text as="p">F O L L O W E R S</Text>
-            <Flexsocial>
+            <div className="flexsocial">
               <Iconup src={iconup} alt="IconUp"/>
               <Text as="h4">12 Today</Text>
-            </Flexsocial>
-            </Sectionhover>
-          </Sectionsocial> 
+            </div>
+          </Box> 
 
           
-          <Sectionsocial as="twitter">
-            <Flexsocial>
+          <Box anotherClassName="socialtwitter">
+            <div className="flexsocial">
               <Icontwitter src={icontwitter} alt="IconTwitter"/>
               <Text as="h2">@nathanf</Text>
-            </Flexsocial>
+            </div>
             <Text as="h3">1044</Text>
             <Text as="p">F O L L O W E R S</Text>
-            <Flexsocial>
+            <div className="flexsocial">
               <Iconup src={iconup} alt="IconUp"/>
               <Text as="h4">99 Today</Text>
-            </Flexsocial>
-          </Sectionsocial> 
+            </div>
+          </Box> 
 
-          <Sectionsocial as="instagram">
-           <Flexsocial>
+          <Box anotherClassName="socialinstagram">
+            <div className="flexsocial">
             <Iconinstagram src={iconinstagram} alt="IconInstagram"/>
             <Text as="h2">@realnathanf</Text>
-           </Flexsocial>
+           </div>
            <Text as="h3">11k</Text>
            <Text as="p">F O L L O W E R S</Text>
-           <Flexsocial>
+           <div className="flexsocial">
             <Iconup src={iconup} alt="IconUp"/>
             <Text as="h4">1099 Today</Text>
-           </Flexsocial>
-          </Sectionsocial> 
+           </div>
+          </Box> 
 
-          <Sectionsocial as="youtube">
-            <Flexsocial>
+          <Box anotherClassName="socialyoutube">
+            <div className="flexsocial">
               <IconYoutube src={iconyoutube} alt="IconYoutube"/>
               <Text as="h2">Nathan F.</Text>
-            </Flexsocial>
+            </div>
             <Text as="h3">8239</Text>
             <Text as="p">S U B S C R I B E R S</Text>
-            <Flexsocial>
+            <div className="flexsocial">
               <Icondown src={icondown} alt="IconDown"/>
               <Text as="h5">144 Today</Text>
-            </Flexsocial>
-          </Sectionsocial> 
+            </div>
+          </Box> 
 
-        </Tableausocial>
+        </div>
 
         <Text as="h1">Overview - Today</Text>
 
-        <Tableauoverview>
+        <div className="tableauoverview">
 
-        <Sectionoverview as="ovpgfacebook">
-          <Flexoverview>
+        <Box anotherClassName="ovpgfacebook">
+          <div className="flexoverview">
             <Text as="h2">Page views</Text>
             <IconFacebook src={iconfacebook} alt="IconFacebook"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+            <div className="flexoverview">
             <Text as="h6">87</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Iconup src={iconup} atl="IconUp"/>
               <Text as="h4">3%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        <Sectionoverview as="ovlkfacebook">
-          <Flexoverview>
+        <Box anotherClassName="ovlkfacebook">
+          <div className="flexoverview">
             <Text as="h2">Likes</Text>
             <IconFacebook src={iconfacebook} alt="IconFacebook"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+          <div className="flexoverview">
             <Text as="h6">52</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Icondown src={icondown} alt="IconDown"/>
               <Text as="h5">2%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        <Sectionoverview as="ovlkinstagram">
-          <Flexoverview>
+        <Box anotherClassName="ovlkinstagram">
+          <div className="flexoverview">
             <Text as="h2">Likes</Text>
             <Iconinstagram src={iconinstagram} alt="IconInstagram"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+          <div className="flexoverview">
             <Text as="h6">5462</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Iconup src={iconup} alt="IconUp"/>
               <Text as="h4">2267%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        <Sectionoverview as="ovpginstagram">
-          <Flexoverview>
+        <Box anotherClassName="ovpginstagram">
+          <div className="flexoverview">
             <Text as="h2">Profile Views</Text>
             <Iconinstagram src={iconinstagram} alt="IconInstagram"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+          <div className="flexoverview">
             <Text as="h6">52k</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Iconup src={iconup} alt="IconUp"/>
               <Text as="h4">1375%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        <Sectionoverview as="ovpgtwitter">
-          <Flexoverview>
+        <Box anotherClassName="ovpgtwitter">
+          <div className="flexoverview">
             <Text as="h2">Retweets</Text>
             <Icontwitter src={icontwitter} alt="IconTwitter"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+          <div className="flexoverview">
             <Text as="h6">117</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Iconup src={iconup} alt="IconUp"/>
               <Text as="h4">303%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        <Sectionoverview as="ovlktwitter">
-          <Flexoverview>
+        <Box anotherClassName="ovlktwitter">
+          <div className="flexoverview">
             <Text as="h2">Likes</Text>
             <Icontwitter src={icontwitter} alt="IconTwitter"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+          <div className="flexoverview">
             <Text as="h6">507</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Iconup src={iconup} alt="IconUp"/>
               <Text as="h4">553%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        <Sectionoverview as="ovlkyoutube">
-          <Flexoverview>
+        <Box anotherClassName="ovlkyoutube">
+          <div className="flexoverview">
             <Text as="h2">Likes</Text>
             <IconYoutube src={iconyoutube} alt="IconYoutube"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+          <div className="flexoverview">
             <Text as="h6">107</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Icondown src={icondown} alt="IconDown"/>
               <Text as="h5">19%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        <Sectionoverview as="ovpgyoutube">
-          <Flexoverview>
+        <Box anotherClassName="ovpgyoutube">
+          <div className="flexoverview">
             <Text as="h2">Total views</Text>
             <IconYoutube src={iconyoutube} alt="IconYoutube"/>
-          </Flexoverview>
-          <Flexoverview>
+          </div>
+          <div className="flexoverview">
             <Text as="h6">1407</Text>
-            <Ovupdown>
+            <div className="ovupdown">
               <Icondown src={icondown} alt="IconDown"/>
               <Text as="h5">12%</Text>
-            </Ovupdown>
-          </Flexoverview>
-        </Sectionoverview>
+            </div>
+          </div>
+        </Box>
 
-        </Tableauoverview>
+        </div>
         
       </Container>
-
-
-        <div className="switch">
-          <label> {theme === "dark" ? "Dark Mode" : "Light Mode"}</label>
-          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-        </div>
-
 
       </div>
     </ThemeContext.Provider>

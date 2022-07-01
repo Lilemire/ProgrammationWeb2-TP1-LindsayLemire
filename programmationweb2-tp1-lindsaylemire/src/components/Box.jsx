@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Sectionhover = ({children, anotherClassName}) => {
+const Box = ({children, anotherClassName}) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const onMouseEnter = () => setIsHovered(true);
@@ -18,4 +18,4 @@ const Sectionhover = ({children, anotherClassName}) => {
     );
 }
 
-export default Sectionhover;
+export default Box;

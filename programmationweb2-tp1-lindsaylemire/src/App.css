@@ -18,7 +18,7 @@ code {
 }
 
 #light {
-  background-color: #f3ebf6;
+  background-color: white;
 }
 
 #dark {
@@ -32,9 +32,9 @@ body {
 
 .switch {
   display: flex;
-  width: 100vw;
-  height: 100px;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -52,52 +52,74 @@ body {
 
 .container {
   width : 90%;
-  margin: 0 auto;
+  margin: -29% 3% -47% 3%;
+  padding-bottom: 7%;
 }
 
 .h1 {
   color: white;
-  font-size:150%;
-  margin-bottom: -1.5%;
+  font-size: 2rem;
+  width: 100%;
+}
+
+#light .h1 {
+  color: black;
 }
 
 .h2 {
   color: white;
   font-weight: 100;
-  font-size: 90%;
+  font-size: 1rem;
 }
 
+#light .h2 {
+  color: black;
+}
 
 .h3 {
-  font-size:300%;
-  margin-top:-5%;
+  color: white;
+  font-size:3.5rem;
+  margin-top: 0rem;
 }
 
+#light .h3 {
+  color: black;
+}
 
 .h4 {
   font-weight: 400;
-  font-size: 80%;
+  font-size: 0.75rem;
   color: #1EB589;
-  margin-left: 3%;
+  margin-left: 0.25rem;
 }
 
 
 .h5 {
   font-weight: 400;
-  font-size: 80%;
+  font-size: 0.75rem;
   color: #DC414C;
-  margin-left: 3%;
+  margin-left: 0.25rem;
 }
 
 
 .h6 {
-  font-size:150%;
+  color: white;
+  font-size:2.5rem;
+}
+
+#light .h6 {
+  color: black;
 }
 
 .p {
+  color: white;
   font-weight: 100;
-  font-size: 90%;
-  margin-top: -22%;
+  font-size: 1rem;
+  margin-top: -4rem;
+}
+
+#light .p {
+  color: black;
 }
 
 .tableausocial {
@@ -107,44 +129,61 @@ body {
   "fb tw ig yt";
 }
 
-.facebook {
+.socialfacebook {
   grid-area: fb;
-  color: white;
   background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 0%;
-  padding:10%;
+  margin: 1rem 0.5rem 0rem 0rem;
+  padding: 1.5rem;
   text-align: center;
   border-top: #3b5998 4px solid;
 }
 
-.twitter {
+#light .socialfacebook {
+  background-color: rgb(231, 231, 231);;
+}
+
+.socialtwitter {
   grid-area: tw;
-  color: white;
   background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 4%;
-  padding:10%;
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  padding:1.5rem;
   text-align: center;
   border-top: rgb(29, 155, 240) 4px solid;
 }
 
-.instagram {
+#light .socialtwitter {
+  background-color: rgb(231, 231, 231);
+}
+
+
+.socialinstagram {
   grid-area: ig;
   color: white;
   background-color: rgb(49, 45, 69);
-  margin: 10% 4% 0% 4%;
-  padding:10%;
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  padding:1.5rem;
   text-align: center;
   border-top: #FFDC80 4px solid;
 }
 
-.youtube {
+#light .socialinstagram {
+  color: black;
+  background-color: rgb(231, 231, 231);
+}
+
+.socialyoutube {
   grid-area: yt;
   color: white;
   background-color: rgb(49, 45, 69);
-  margin: 10% 0% 0% 4%;
-  padding:10%;
+  margin: 1rem 0rem 0rem 0.5rem;
+  padding:1.5rem;
   text-align: center;
   border-top: red 4px solid;
+}
+
+#light .socialyoutube {
+  color: black;
+  background-color: rgb(231, 231, 231);
 }
 
 .iconFb {
@@ -175,7 +214,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5%;
 }
 
 .ovpgtwitter {
@@ -187,6 +225,11 @@ body {
   text-align: center;
 }
 
+#light .ovpgtwitter {
+  color: black;
+  background-color: rgb(231, 231, 231);;
+}
+
 .ovlktwitter {
   grid-area: ovlktw;
   color: white;
@@ -194,6 +237,11 @@ body {
   margin: 10% 4% 0% 0%;
   padding:10%;
   text-align: center;
+}
+
+#light .ovlktwitter {
+  color: black;
+  background-color: rgb(231, 231, 231);
 }
 
 .ovpginstagram {
@@ -205,6 +253,11 @@ body {
   text-align: center;
 }
 
+#light .ovpginstagram {
+  color: black;
+  background-color: rgb(231, 231, 231);
+}
+
 .ovlkinstagram {
   grid-area: ovlkig;
   color: white;
@@ -212,6 +265,11 @@ body {
   margin: 10% 4% 0% 0%;
   padding:10%;
   text-align: center;
+}
+
+#light .ovlkinstagram {
+  color: black;
+  background-color: rgb(231, 231, 231);
 }
 
 .ovpgyoutube {
@@ -223,6 +281,11 @@ body {
   text-align: center;
 }
 
+#light .ovpgyoutube {
+  color: black;
+  background-color: rgb(231, 231, 231);
+}
+
 .ovlkyoutube {
   grid-area: ovlkyt;
   color: white;
@@ -230,6 +293,11 @@ body {
   margin: 10% 4% 0% 0%;
   padding:10%;
   text-align: center;
+}
+
+#light .ovlkyoutube {
+  color: black;
+  background-color: rgb(231, 231, 231);
 }
 
 .ovpgfacebook {
@@ -241,6 +309,11 @@ body {
   text-align: center;
 }
 
+#light .ovpgfacebook {
+  color: black;
+  background-color: rgb(231, 231, 231);
+}
+
 .ovlkfacebook {
   grid-area: ovlkfb;
   color: white;
@@ -250,23 +323,43 @@ body {
   text-align: center;
 }
 
+#light .ovlkfacebook {
+  color: black;
+  background-color: rgb(231, 231, 231);
+}
+
 .tableauoverview {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: 
   "ovpgfb ovlkfb ovlkig ovpgig"
   "ovpgtw ovlktw ovlkyt ovpgyt";
+  margin-top: -2rem;
 }
 
 .flexoverview {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0%;
+  margin-bottom: -5.5rem;
 }
 
 .ovupdown {
   display: flex;
   align-items: center;
-  margin-top: -15%;
+}
+
+.flexcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -2.5%;
+}
+
+#dark .hoveredsections {
+  background-color: rgb(65, 60, 87);
+}
+
+#light .hoveredsections {
+  background-color: rgb(199, 199, 199);
 }
